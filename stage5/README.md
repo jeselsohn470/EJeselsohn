@@ -1,6 +1,6 @@
-Document Store (Data Structures  Project, Spring 2020)
+###Document Store (Data Structures  Project, Spring 2020)###
 
-Project description
+##Project description##
 
 • Developed a search engine that stores text or pdf files in memory, utilizing several built-from-scratch data structures, including Hash-Table, Stack, Trie, Heap, and B-Tree.
 
