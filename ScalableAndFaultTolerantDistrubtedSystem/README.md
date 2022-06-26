@@ -1,25 +1,9 @@
-A couple notes on my code:
+Built a scalable and fault tolerant Distributed System in Java. 
+Built a cluster of nodes which use the Master-Worker architecture. The server that wins the ZooKeeper Leader election functions as the master, and the other servers function as workers. The leader/master is the only server that:
+- accepts requests from clients
+- sends replies to clients
+- assigns client requests to worker nodes that can do the work necessary to fulfill the requests.
+Built a Gateway, which provides the public endpoint and API of my cluster and serves as the middleman between all clients and whichever node is currently the leader. 
+Used an HTTP connection betweent the Client and Gateway, TCP connection between the Gateway and leader/master and a TCP connection between the leader/master and worker nodes. I also used a UDP connection for all the messages between servers that have to do with leader connection. 
+Implemented a fault tolerant system using Gossip-Style heartbeats to detect node failures. If the leader node fails, then a new leader election is triggered and ensured no client requests were lost. 
 
-For starters, my computer is old and slow so every time I ran my code, it caused my computer to heat up and make lots of 
-noise. 
-That is why I had long sleep and wait times in my code. It also took a lot of playing around with the Gossip times and 
-sleep times for it to work. Hence, the long wait time after something dies and the very short sleep time in between 
-sending of Gossip messages. If the sleep time were any longer, then servers would think that servers that in reality did
-not die, died.
-
-Secondly, I have included two bash scripts. One that creates an output.log file and one that does not. I found that when
-running the bash script that created the output.log file, it would sometimes fail. Not sure why. 
-However, the one that never created the output.log file would never fail. Sometimes when running both the mvn test and 
-the script one after another, it caused my computer to go into overdrive and the code did not work. 
-That is why I commented out mvn test in my bash script and you can run them seperately or just uncomment it to run 
-them together. Once again, I think this is because my computer is old and slow.
-
-Lastly, because of all the reasons mentioned above and because the times on my computer are for sure very different 
-than the times of your computer, I saved one of the output files for you to go through(stage5/output.log). 
-In the output.log file, you can see the output from the two tests I ran 
-(one where the follower dies and one where the leader dies) 
-and the script (according to the steps you wanted).
-You can see that in the script, the follower dies and then the leader dies and a new leader is elected and this new 
-leader has an ID of 2. I also saved the log files from that test.
-The log files for my MVN TEST are under the directory of com3800/stage5/logs 
-and the log files for my SCRIPT are under the directory of com3800/stage5/src/main/java/logs
