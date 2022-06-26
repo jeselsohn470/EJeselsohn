@@ -1,4 +1,5 @@
-Built a scalable and fault tolerant Distributed System in Java. 
+Built a scalable and fault tolerant Distributed System in Java which provides serverless execution of Java code. 
+
 Built a cluster of nodes which use the Master-Worker architecture. The server that wins the ZooKeeper Leader election functions as the master, and the other servers function as workers. The leader/master is the only server that:
 - accepts requests from clients
 - sends replies to clients
@@ -8,5 +9,5 @@ Built a Gateway, which provides the public endpoint and API of my cluster and se
 
 Used an HTTP connection betweent the Client and Gateway, TCP connection between the Gateway and leader/master and a TCP connection between the leader/master and worker nodes. I also used a UDP connection for all the messages between servers that have to do with leader connection. 
 
-Implemented a fault tolerant system using Gossip-Style heartbeats to detect node failures. If the leader node fails, then a new leader election is triggered and no client requests are lost. 
+Implemented a fault tolerant system using Gossip-Style heartbeats to detect node failures. If the leader node fails, then a new leader election is triggered and no client requests are lost. If a follower goes down, the leader re-delegates all of its uncompleted work, 
 
