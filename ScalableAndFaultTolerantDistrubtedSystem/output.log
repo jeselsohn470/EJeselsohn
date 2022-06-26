@@ -1,0 +1,737 @@
+running the bash script
+
+running my test code
+[INFO] Scanning for projects...
+[WARNING]
+[WARNING] Some problems were encountered while building the effective model for org.example:stage1:jar:1.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 12, column 21
+[WARNING]
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING]
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING]
+[INFO]
+[INFO] -------------------------< org.example:stage1 >-------------------------
+[INFO] Building stage1 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ stage1 ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 0 resource
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ stage1 ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 23 source files to /Users/eitanjeselsohn/JeselsohnEitan/com3800/stage5/target/classes
+[WARNING] /Users/eitanjeselsohn/JeselsohnEitan/com3800/stage5/src/main/java/edu/yu/cs/com3800/JavaRunner.java: Some input files use unchecked or unsafe operations.
+[WARNING] /Users/eitanjeselsohn/JeselsohnEitan/com3800/stage5/src/main/java/edu/yu/cs/com3800/JavaRunner.java: Recompile with -Xlint:unchecked for details.
+[INFO]
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ stage1 ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /Users/eitanjeselsohn/JeselsohnEitan/com3800/stage5/src/test/resources
+[INFO]
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ stage1 ---
+[INFO] Nothing to compile - all classes are up to date
+[INFO]
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ stage1 ---
+[INFO] Surefire report directory: /Users/eitanjeselsohn/JeselsohnEitan/com3800/stage5/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running edu.yu.cs.com3800.stage5.Stage5Test
+0: switching from LOOKING to FOLLOWING
+
+1: switching from LOOKING to FOLLOWING
+
+2: switching from LOOKING to FOLLOWING
+
+3: switching from LOOKING to FOLLOWING
+
+4: switching from LOOKING to FOLLOWING
+
+5: switching from LOOKING to LEADING
+
+Server on port 6010 whose ID is 0 has the following ID as its leader: 5 and its state is FOLLOWING
+Server on port 6020 whose ID is 1 has the following ID as its leader: 5 and its state is FOLLOWING
+Server on port 6030 whose ID is 2 has the following ID as its leader: 5 and its state is FOLLOWING
+Server on port 6040 whose ID is 3 has the following ID as its leader: 5 and its state is FOLLOWING
+Server on port 6050 whose ID is 4 has the following ID as its leader: 5 and its state is FOLLOWING
+Server on port 6060 whose ID is 5 has the following ID as its leader: 5 and its state is LEADING
+This is the response to be returned: Hello world1!
+This is the status code to be returned: 200
+This is the response to be returned: Code did not compile:
+Error on line 7, column 16 in string:///edu/yu/cs/fall2019/com3800/stage1/HelloWorld.java
+
+java.lang.IllegalArgumentException: Code did not compile:
+Error on line 7, column 16 in string:///edu/yu/cs/fall2019/com3800/stage1/HelloWorld.java
+
+        at edu.yu.cs.com3800.JavaRunner.compileFromString(JavaRunner.java:91)
+        at edu.yu.cs.com3800.JavaRunner.compileAndRun(JavaRunner.java:68)
+        at edu.yu.cs.com3800.stage5.JavaRunnerFollower.readMessage(JavaRunnerFollower.java:160)
+        at edu.yu.cs.com3800.stage5.JavaRunnerFollower.run(JavaRunnerFollower.java:125)
+
+This is the status code to be returned: 400
+This is the response to be returned: Hello world3!
+This is the status code to be returned: 200
+This is the response to be returned: Hello world4!
+This is the status code to be returned: 200
+This is the response to be returned: Hello world5!
+This is the status code to be returned: 200
+killing follower with id 0
+Jan 09, 2022 8:19:10 PM edu.yu.cs.com3800.UDPMessageReceiver run
+SEVERE: Exiting UDPMessageReceiver.run()
+Jan 09, 2022 8:19:10 PM edu.yu.cs.com3800.UDPMessageSender run
+SEVERE: Exiting UDPMessageSender.run()
+3: no heartbeat from server 0 - server failed
+2: no heartbeat from server 0 - server failed
+4: no heartbeat from server 0 - server failed
+5: no heartbeat from server 0 - server failed
+1: no heartbeat from server 0 - server failed
+18: no heartbeat from server 0 - server failed
+Server on port 6020 whose ID is 1 has the following ID as its leader: 5 and its state is FOLLOWING
+Server on port 6030 whose ID is 2 has the following ID as its leader: 5 and its state is FOLLOWING
+Server on port 6040 whose ID is 3 has the following ID as its leader: 5 and its state is FOLLOWING
+Server on port 6050 whose ID is 4 has the following ID as its leader: 5 and its state is FOLLOWING
+Server on port 6060 whose ID is 5 has the following ID as its leader: 5 and its state is LEADING
+This is the response to be returned: Hello world6!
+This is the status code to be returned: 200
+This is the response to be returned: Hello world7!
+This is the status code to be returned: 200
+This is the response to be returned: Code did not compile:
+Error on line 7, column 16 in string:///edu/yu/cs/fall2019/com3800/stage1/HelloWorld.java
+
+java.lang.IllegalArgumentException: Code did not compile:
+Error on line 7, column 16 in string:///edu/yu/cs/fall2019/com3800/stage1/HelloWorld.java
+
+        at edu.yu.cs.com3800.JavaRunner.compileFromString(JavaRunner.java:91)
+        at edu.yu.cs.com3800.JavaRunner.compileAndRun(JavaRunner.java:68)
+        at edu.yu.cs.com3800.stage5.JavaRunnerFollower.readMessage(JavaRunnerFollower.java:160)
+        at edu.yu.cs.com3800.stage5.JavaRunnerFollower.run(JavaRunnerFollower.java:125)
+
+This is the status code to be returned: 400
+Jan 09, 2022 8:20:16 PM edu.yu.cs.com3800.UDPMessageSender run
+SEVERE: Exiting UDPMessageSender.run()
+Jan 09, 2022 8:20:16 PM edu.yu.cs.com3800.UDPMessageReceiver run
+SEVERE: Exiting UDPMessageReceiver.run()
+Jan 09, 2022 8:20:17 PM edu.yu.cs.com3800.UDPMessageSender run
+SEVERE: Exiting UDPMessageSender.run()
+Jan 09, 2022 8:20:19 PM edu.yu.cs.com3800.UDPMessageReceiver run
+SEVERE: Exiting UDPMessageReceiver.run()
+Jan 09, 2022 8:20:19 PM edu.yu.cs.com3800.UDPMessageSender run
+SEVERE: Exiting UDPMessageSender.run()
+Jan 09, 2022 8:20:20 PM edu.yu.cs.com3800.UDPMessageSender run
+SEVERE: Exiting UDPMessageSender.run()
+Jan 09, 2022 8:20:22 PM edu.yu.cs.com3800.UDPMessageReceiver run
+SEVERE: Exiting UDPMessageReceiver.run()
+Jan 09, 2022 8:20:22 PM edu.yu.cs.com3800.UDPMessageReceiver run
+SEVERE: Exiting UDPMessageReceiver.run()
+Jan 09, 2022 8:20:22 PM edu.yu.cs.com3800.UDPMessageSender run
+SEVERE: Exiting UDPMessageSender.run()
+Jan 09, 2022 8:20:23 PM edu.yu.cs.com3800.UDPMessageSender run
+SEVERE: Exiting UDPMessageSender.run()
+Jan 09, 2022 8:20:25 PM edu.yu.cs.com3800.UDPMessageReceiver run
+SEVERE: Exiting UDPMessageReceiver.run()
+Jan 09, 2022 8:20:25 PM edu.yu.cs.com3800.UDPMessageReceiver run
+SEVERE: Exiting UDPMessageReceiver.run()
+2: switching from LOOKING to FOLLOWING
+
+1: switching from LOOKING to FOLLOWING
+
+3: switching from LOOKING to FOLLOWING
+
+0: switching from LOOKING to FOLLOWING
+
+4: switching from LOOKING to FOLLOWING
+
+5: switching from LOOKING to LEADING
+
+Server on port 7010 whose ID is 0 has the following ID as its leader: 5 and its state is FOLLOWING
+Server on port 7020 whose ID is 1 has the following ID as its leader: 5 and its state is FOLLOWING
+Server on port 7030 whose ID is 2 has the following ID as its leader: 5 and its state is FOLLOWING
+Server on port 7040 whose ID is 3 has the following ID as its leader: 5 and its state is FOLLOWING
+Server on port 7050 whose ID is 4 has the following ID as its leader: 5 and its state is FOLLOWING
+Server on port 7060 whose ID is 5 has the following ID as its leader: 5 and its state is LEADING
+This is the response to be returned: Hello world1!
+This is the status code to be returned: 200
+This is the response to be returned: Hello world2!
+This is the status code to be returned: 200
+This is the response to be returned: Hello world3!
+This is the status code to be returned: 200
+This is the response to be returned: Hello world4!
+This is the status code to be returned: 200
+This is the response to be returned: Code did not compile:
+Error on line 7, column 16 in string:///edu/yu/cs/fall2019/com3800/stage1/HelloWorld.java
+
+java.lang.IllegalArgumentException: Code did not compile:
+Error on line 7, column 16 in string:///edu/yu/cs/fall2019/com3800/stage1/HelloWorld.java
+
+        at edu.yu.cs.com3800.JavaRunner.compileFromString(JavaRunner.java:91)
+        at edu.yu.cs.com3800.JavaRunner.compileAndRun(JavaRunner.java:68)
+        at edu.yu.cs.com3800.stage5.JavaRunnerFollower.readMessage(JavaRunnerFollower.java:160)
+        at edu.yu.cs.com3800.stage5.JavaRunnerFollower.run(JavaRunnerFollower.java:125)
+
+This is the status code to be returned: 400
+killing the leader
+Jan 09, 2022 8:20:41 PM edu.yu.cs.com3800.UDPMessageSender run
+SEVERE: Exiting UDPMessageSender.run()
+Jan 09, 2022 8:20:41 PM edu.yu.cs.com3800.UDPMessageReceiver run
+SEVERE: Exiting UDPMessageReceiver.run()
+4: no heartbeat from server 5 - server failed
+4: switching from FOLLOWING to LOOKING
+0: no heartbeat from server 5 - server failed
+0: switching from FOLLOWING to LOOKING
+2: no heartbeat from server 5 - server failed
+2: switching from FOLLOWING to LOOKING
+18: no heartbeat from server 5 - server failed
+3: no heartbeat from server 5 - server failed
+3: switching from FOLLOWING to LOOKING
+1: no heartbeat from server 5 - server failed
+1: switching from FOLLOWING to LOOKING
+3: switching from LOOKING to FOLLOWING
+
+1: switching from LOOKING to FOLLOWING
+
+0: switching from LOOKING to FOLLOWING
+
+2: switching from LOOKING to FOLLOWING
+
+4: switching from LOOKING to LEADING
+
+Server on port 7010 whose ID is 0 has the following ID as its leader: 4 and its state is FOLLOWING
+Server on port 7020 whose ID is 1 has the following ID as its leader: 4 and its state is FOLLOWING
+Server on port 7030 whose ID is 2 has the following ID as its leader: 4 and its state is FOLLOWING
+Server on port 7040 whose ID is 3 has the following ID as its leader: 4 and its state is FOLLOWING
+Server on port 7050 whose ID is 4 has the following ID as its leader: 4 and its state is LEADING
+This is the response to be returned: Hello world6!
+This is the status code to be returned: 200
+This is the response to be returned: Hello world7!
+This is the status code to be returned: 200
+This is the response to be returned: Hello world8!
+This is the status code to be returned: 200
+Jan 09, 2022 8:21:59 PM edu.yu.cs.com3800.UDPMessageReceiver run
+SEVERE: Exiting UDPMessageReceiver.run()
+Jan 09, 2022 8:21:59 PM edu.yu.cs.com3800.UDPMessageSender run
+SEVERE: Exiting UDPMessageSender.run()
+Jan 09, 2022 8:22:01 PM edu.yu.cs.com3800.UDPMessageSender run
+SEVERE: Exiting UDPMessageSender.run()
+Jan 09, 2022 8:22:01 PM edu.yu.cs.com3800.UDPMessageReceiver run
+SEVERE: Exiting UDPMessageReceiver.run()
+Jan 09, 2022 8:22:02 PM edu.yu.cs.com3800.UDPMessageSender run
+SEVERE: Exiting UDPMessageSender.run()
+Jan 09, 2022 8:22:04 PM edu.yu.cs.com3800.UDPMessageSender run
+SEVERE: Exiting UDPMessageSender.run()
+Jan 09, 2022 8:22:04 PM edu.yu.cs.com3800.UDPMessageReceiver run
+SEVERE: Exiting UDPMessageReceiver.run()
+Jan 09, 2022 8:22:05 PM edu.yu.cs.com3800.UDPMessageReceiver run
+SEVERE: Exiting UDPMessageReceiver.run()
+Jan 09, 2022 8:22:05 PM edu.yu.cs.com3800.UDPMessageSender run
+SEVERE: Exiting UDPMessageSender.run()
+Jan 09, 2022 8:22:07 PM edu.yu.cs.com3800.UDPMessageSender run
+SEVERE: Exiting UDPMessageSender.run()
+Jan 09, 2022 8:22:07 PM edu.yu.cs.com3800.UDPMessageReceiver run
+SEVERE: Exiting UDPMessageReceiver.run()
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 197.399 sec
+
+Results :
+
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  03:20 min
+[INFO] Finished at: 2022-01-09T20:22:08-05:00
+[INFO] ------------------------------------------------------------------------
+
+
+Now I am running the script
+
+compiling the src code
+
+src/main/java/edu/yu/cs/com3800/JavaRunner.java:99: warning: [rawtypes] found raw type: DiagnosticCollector
+    private boolean compile(Path destDir, JavaFileObjectFromString srcStr, DiagnosticCollector dc) {
+                                                                           ^
+  missing type arguments for generic class DiagnosticCollector<S>
+  where S is a type-variable:
+    S extends Object declared in class DiagnosticCollector
+src/main/java/edu/yu/cs/com3800/JavaRunner.java:102: warning: [unchecked] unchecked method invocation: method getStandardFileManager in interface JavaCompiler is applied to given types
+        StandardJavaFileManager fileManager = compiler.getStandardFileManager(dc, null, null);
+                                                                             ^
+  required: DiagnosticListener<? super JavaFileObject>,Locale,Charset
+  found: DiagnosticCollector,<null>,<null>
+src/main/java/edu/yu/cs/com3800/JavaRunner.java:102: warning: [unchecked] unchecked conversion
+        StandardJavaFileManager fileManager = compiler.getStandardFileManager(dc, null, null);
+                                                                              ^
+  required: DiagnosticListener<? super JavaFileObject>
+  found:    DiagnosticCollector
+src/main/java/edu/yu/cs/com3800/JavaRunner.java:113: warning: [unchecked] unchecked method invocation: method getTask in interface JavaCompiler is applied to given types
+        JavaCompiler.CompilationTask task = compiler.getTask(null, fileManager, dc, options, null, files);
+                                                            ^
+  required: Writer,JavaFileManager,DiagnosticListener<? super JavaFileObject>,Iterable<String>,Iterable<String>,Iterable<? extends JavaFileObject>
+  found: <null>,StandardJavaFileManager,DiagnosticCollector,List<String>,<null>,ArrayList<JavaFileObject>
+src/main/java/edu/yu/cs/com3800/JavaRunner.java:113: warning: [unchecked] unchecked conversion
+        JavaCompiler.CompilationTask task = compiler.getTask(null, fileManager, dc, options, null, files);
+                                                                                ^
+  required: DiagnosticListener<? super JavaFileObject>
+  found:    DiagnosticCollector
+src/main/java/edu/yu/cs/com3800/JavaRunner.java:147: warning: [rawtypes] found raw type: Class
+            Class clazz = loader.findClass(name.canonicalName);
+            ^
+  missing type arguments for generic class Class<T>
+  where T is a type-variable:
+    T extends Object declared in class Class
+src/main/java/edu/yu/cs/com3800/JavaRunner.java:148: warning: [unchecked] unchecked call to getDeclaredConstructor(Class<?>...) as a member of the raw type Class
+            Object obj = clazz.getDeclaredConstructor().newInstance();
+                                                     ^
+  where T is a type-variable:
+    T extends Object declared in class Class
+src/main/java/edu/yu/cs/com3800/JavaRunner.java:189: warning: [rawtypes] found raw type: Class
+        public Class findClass(String name) throws ClassNotFoundException {
+               ^
+  missing type arguments for generic class Class<T>
+  where T is a type-variable:
+    T extends Object declared in class Class
+src/main/java/edu/yu/cs/com3800/Util.java:12: warning: [static] static method should be qualified by type name, Thread, instead of by an expression
+                    Thread.currentThread().sleep(500);
+                                          ^
+src/main/java/edu/yu/cs/com3800/stage5/Stage5PeerServerDemo.java:216: warning: [unchecked] unchecked cast
+            HashMap<Long, InetSocketAddress> map = (HashMap<Long, InetSocketAddress>) peerIDtoAddress.clone();
+                                                                                                           ^
+  required: HashMap<Long,InetSocketAddress>
+  found:    Object
+10 warnings
+starting up the 7 servers and gateway
+
+3: switching from LOOKING to FOLLOWING
+
+0: switching from LOOKING to FOLLOWING
+
+2: switching from LOOKING to FOLLOWING
+
+6: switching from LOOKING to LEADING
+
+1: switching from LOOKING to FOLLOWING
+
+4: switching from LOOKING to FOLLOWING
+
+5: switching from LOOKING to FOLLOWING
+
+
+entered step 3
+
+Server whose ID is 0 is in the state of FOLLOWING
+Server whose ID is 1 is in the state of FOLLOWING
+Server whose ID is 2 is in the state of FOLLOWING
+Server whose ID is 3 is in the state of FOLLOWING
+Server whose ID is 4 is in the state of FOLLOWING
+Server whose ID is 5 is in the state of FOLLOWING
+Server whose ID is 6 is in the state of LEADING
+Server whose ID is 15 is in the state of OBSERVER
+
+
+entered step 4
+
+
+This is request # 1:
+
+package edu.yu.cs.fall2019.com3800.stage1;
+
+public class HelloWorld
+{
+    public String run()
+    {
+        return "Hello world! 1";
+    }
+}
+
+
+This is the request # 2:
+
+package edu.yu.cs.fall2019.com3800.stage1;
+
+public class HelloWorld
+{
+    public String run()
+    {
+        return "Hello world! 2";
+    }
+}
+
+
+This is request #3:
+
+package edu.yu.cs.fall2019.com3800.stage1;
+
+public class HelloWorld
+{
+    public String run()
+    {
+        return "Hello world! 3";
+    }
+}
+
+
+This is request #4:
+
+package edu.yu.cs.fall2019.com3800.stage1;
+
+public class HelloWorld
+{
+    public String run()
+    {
+        return "Hello world! 4";
+    }
+}
+
+
+This is request #5:
+
+package edu.yu.cs.fall2019.com3800.stage1;
+
+public class HelloWorld
+{
+    public String run()
+    {
+        return "Hello world! 5";
+    }
+}
+
+
+This is request #6:
+
+package edu.yu.cs.fall2019.com3800.stage1;
+
+public class HelloWorld
+{
+    public String run()
+    {
+        return "Hello world! 6";
+    }
+}
+
+
+This is request #7:
+
+package edu.yu.cs.fall2019.com3800.stage1;
+
+public class HelloWorld
+{
+    public String run()
+    {
+        return "Hello world! 7";
+    }
+}
+
+
+This is request #8:
+
+package edu.yu.cs.fall2019.com3800.stage1;
+
+public class HelloWorld
+{
+    public String run()
+    {
+        return "Hello world! 8";
+    }
+}
+
+
+This is request #9:
+
+package edu.yu.cs.fall2019.com3800.stage1;
+
+public class HelloWorld
+{
+    public String run()
+    {
+        return "Hello world! 9";
+    }
+}
+
+
+
+This response #1 to be returned: Hello world! 1
+
+This is the status code #1 to be returned: 200
+
+This response #2 to be returned: Hello world! 2
+
+This is the status code #2 to be returned: 200
+
+This response #3 to be returned: Hello world! 3
+
+This is the status code #3 to be returned: 200
+
+This response #4 to be returned: Hello world! 4
+
+This is the status code #4 to be returned: 200
+
+This response #5 to be returned: Hello world! 5
+
+This is the status code #5 to be returned: 200
+
+This response #6 to be returned: Hello world! 6
+
+This is the status code #6 to be returned: 200
+
+This response #7 to be returned: Hello world! 7
+
+This is the status code #7 to be returned: 200
+
+This response #8 to be returned: Hello world! 8
+
+This is the status code #8 to be returned: 200
+
+This response #9 to be returned: Hello world! 9
+
+This is the status code #9 to be returned: 200
+
+entered step 5
+
+Killing the follower server with the ID 5
+
+4: no heartbeat from server 5 - server failed
+6: no heartbeat from server 5 - server failed
+1: no heartbeat from server 5 - server failed
+15: no heartbeat from server 5 - server failed
+2: no heartbeat from server 5 - server failed
+0: no heartbeat from server 5 - server failed
+3: no heartbeat from server 5 - server failed
+Server whose ID is 0 is in the state of FOLLOWING
+Server whose ID is 1 is in the state of FOLLOWING
+Server whose ID is 2 is in the state of FOLLOWING
+Server whose ID is 3 is in the state of FOLLOWING
+Server whose ID is 4 is in the state of FOLLOWING
+Server whose ID is 6 is in the state of LEADING
+Server whose ID is 15 is in the state of OBSERVER
+
+
+entered steps 6 and 7
+
+Leader is killed
+
+
+This is request #1:
+
+package edu.yu.cs.fall2019.com3800.stage1;
+
+public class HelloWorld
+{
+    public String run()
+    {
+        return "Hello world! 1";
+    }
+}
+
+
+This is request #2:
+
+package edu.yu.cs.fall2019.com3800.stage1;
+
+public class HelloWorld
+{
+    public String run()
+    {
+        return "Hello world! 2";
+    }
+}
+
+
+This is request #3:
+
+package edu.yu.cs.fall2019.com3800.stage1;
+
+public class HelloWorld
+{
+    public String run()
+    {
+        return "Hello world! 3";
+    }
+}
+
+
+This is request #4:
+
+package edu.yu.cs.fall2019.com3800.stage1;
+
+public class HelloWorld
+{
+    public String run()
+    {
+        return "Hello world! 4";
+    }
+}
+
+
+This is request #5:
+
+package edu.yu.cs.fall2019.com3800.stage1;
+
+public class HelloWorld
+{
+    public String run()
+    {
+        return "Hello world! 5";
+    }
+}
+
+
+This is request #6:
+
+package edu.yu.cs.fall2019.com3800.stage1;
+
+public class HelloWorld
+{
+    public String run()
+    {
+        return "Hello world! 6";
+    }
+}
+
+
+This is request #7:
+
+package edu.yu.cs.fall2019.com3800.stage1;
+
+public class HelloWorld
+{
+    public String run()
+    {
+        return "Hello world! 7";
+    }
+}
+
+
+This is request #8:
+
+package edu.yu.cs.fall2019.com3800.stage1;
+
+public class HelloWorld
+{
+    public String run()
+    {
+        return "Hello world! 8";
+    }
+}
+
+
+This is request #9:
+
+package edu.yu.cs.fall2019.com3800.stage1;
+
+public class HelloWorld
+{
+    public String run()
+    {
+        return "Hello world! 9";
+    }
+}
+
+1: no heartbeat from server 6 - server failed
+1: switching from FOLLOWING to LOOKING
+2: no heartbeat from server 6 - server failed
+2: switching from FOLLOWING to LOOKING
+3: no heartbeat from server 6 - server failed
+3: switching from FOLLOWING to LOOKING
+4: no heartbeat from server 6 - server failed
+4: switching from FOLLOWING to LOOKING
+1: switching from LOOKING to FOLLOWING
+
+3: switching from LOOKING to FOLLOWING
+
+2: switching from LOOKING to FOLLOWING
+
+4: switching from LOOKING to LEADING
+
+0: no heartbeat from server 6 - server failed
+0: switching from FOLLOWING to LOOKING
+15: no heartbeat from server 6 - server failed
+0: switching from LOOKING to FOLLOWING
+
+
+Server whose ID is 0 is in the state of FOLLOWING
+Server whose ID is 1 is in the state of FOLLOWING
+Server whose ID is 2 is in the state of FOLLOWING
+Server whose ID is 3 is in the state of FOLLOWING
+Server whose ID is 4 is in the state of LEADING
+Server whose ID is 15 is in the state of OBSERVER
+
+
+
+This response #1 to be returned: Hello world! 1
+
+This is the status code #1 to be returned: 200
+
+
+This response #2 to be returned: Hello world! 2
+
+This is the status code #2 to be returned: 200
+
+
+This response #3 to be returned: Hello world! 3
+
+This is the status code #3 to be returned: 200
+
+
+This response #4 to be returned: Hello world! 4
+
+This is the status code #4 to be returned: 200
+
+
+This response #5 to be returned: Hello world! 5
+
+This is the status code #5 to be returned: 200
+
+
+This response #6 to be returned: Hello world! 6
+
+This is the status code #6 to be returned: 200
+
+
+This response #7 to be returned: Hello world! 7
+
+This is the status code #7 to be returned: 200
+
+
+This response #8 to be returned: Hello world! 8
+
+This is the status code #8 to be returned: 200
+
+
+This response #9 to be returned: Hello world! 9
+
+This is the status code #9 to be returned: 200
+
+
+entered step 8
+
+
+This is request #1:
+
+package edu.yu.cs.fall2019.com3800.stage1;
+
+public class HelloWorld
+{
+    public String run()
+    {
+        return "Hello world! 1";
+    }
+}
+
+
+This is the response to be returned: Hello world! 1
+
+This is the status to be returned: 200
+
+entered step 9
+
+The paths to the files containing the Gossip messages received by each node are in a directory called com3800/stage5/src/main/java/logs/GossipThreadMessages
+
+entered step 10
+
+killing the servers
+
+the log files for my MVN TEST are under the directory of com3800/stage5/logs
+
+the log files for my SCRIPT are under the directory of com3800/stage5/src/main/java/logs
